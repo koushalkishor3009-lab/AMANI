@@ -1,2 +1,2 @@
 # AMANI
-Made a Copy of AMANI Web Page
+Made a Clone of AMANI Web Page
