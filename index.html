@@ -89,33 +89,65 @@
         
 
         <div class="container">
+
             <div class="col-sm-4" style="padding-top: 25px;">
-                <form action="/action_page.php">
+                
+                <!-- Booking Form -->
+                <form id="bookingForm" style="max-width:400px; margin:20px auto;">
                     <h1 style="font-weight: 600; font-family: 'Courier New', Courier, monospace;">BOOK NOW</h1>
+
                     <div class="form-group">
-                        <label for="datetime-local" style="font-size: large; font-family: 'Courier New', Courier, monospace; font-weight: 600;">Arrival:</label>
-                        <input type="datetime-local" class="form-control" id="datetime-local" style="background-color: rgb(245, 242, 242); font-size: 20px;">
+                        <label for="arrival" style="font-size: large; font-family: 'Courier New', Courier, monospace; font-weight: 600;">Arrival:</label>
+                        <input type="datetime-local" class="form-control" id="arrival" style="background-color: rgb(245, 242, 242); font-size: 20px;" required>
                     </div>
+
                     <div class="form-group">
-                        <label for="datetime-local" style="font-size: large; font-family: 'Courier New', Courier, monospace; font-weight: 600;">Departure:</label>
-                        <input type="datetime-local" class="form-control" id="datetime-local" style="background-color: rgb(245, 242, 242); font-size: 20px;">
+                        <label for="departure" style="font-size: large; font-family: 'Courier New', Courier, monospace; font-weight: 600;">Departure:</label>
+                        <input type="datetime-local" class="form-control" id="departure" style="background-color: rgb(245, 242, 242); font-size: 20px;" required>
                     </div>
+
                     <div class="form-group">
-                        <label for="Promo Code" style="font-size: large; font-family: 'Courier New', Courier, monospace; font-weight: 600;">Promo Code:</label>
-                        <input type="Promo Code" class="form-control" id="Promo Code" style="background-color: rgb(245, 242, 242); font-size: 20px;">
+                        <label for="Promo" style="font-size: large; font-family: 'Courier New', Courier, monospace; font-weight: 600;">Promo Code:</label>
+                        <input type="Promo Code" class="form-control" id="Promo" style="background-color: rgb(245, 242, 242); font-size: 20px;" required>
                     </div>
+
                     <div class="form-group">
-                        <label for="number" style="font-size: large; font-family: 'Courier New', Courier, monospace; font-weight: 600;">ROOM:</label>
-                        <input type="number" class="form-control" id="number" style="background-color: rgb(245, 242, 242); font-size: 20px;">
+                        <label for="rooms" style="font-size: large; font-family: 'Courier New', Courier, monospace; font-weight: 600;">ROOM:</label>
+                        <input type="number" class="form-control" id="rooms" style="background-color: rgb(245, 242, 242); font-size: 20px;">
                     </div>
+
                     <div class="checkbox">
-                        <label><input type="checkbox">
-                            <p style="font-size: large;"> FLEXIBLE DATES</p>
+                        <label>
+                            <input type="checkbox">
+                            <p id="flexible" style="font-size: large;"> FLEXIBLE DATES</p>
                         </label>
                     </div>
+
                     <button type="submit" class="btn btn-default"
-                        style="font-size: large; font-weight: 600; border: none; background-color: goldenrod;"><a href="#" style="text-decoration-line: none; color: black;">BOOK NOW</a></button>
+                        style="font-size: large; font-weight: 600; border: none; background-color: goldenrod; border: 2px solid #000; text-decoration-line: none; color: black;">BOOK NOW</button>
                 </form>
+                <!-- Modal -->
+<div id="bookingModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:goldenrod; color:black;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><b>Booking Details</b></h4>
+      </div>
+      <div class="modal-body" id="modalContent" style="font-size:16px; font-family:monospace;">
+        <!-- Booking details will be injected here -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Confirm</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
             </div>
 
             <div class="col-sm-8" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
