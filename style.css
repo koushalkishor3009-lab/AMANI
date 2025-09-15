@@ -1,0 +1,29 @@
+        
+.project__card {
+    display: grid;
+    place-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project__card img {
+  transition: scale 0.3s;
+}
+
+.project__card:hover img {
+  scale: 1.1;
+} 
+.nav-list {
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.nav-list:hover,
+.nav-list:focus {
+  color: goldenrod !important;
+  background-color: transparent !important;
+}
